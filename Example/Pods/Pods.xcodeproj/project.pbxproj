@@ -84,6 +84,8 @@
 		915591311D28B95200775AFC /* Style01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915591301D28B95200775AFC /* Style01.swift */; };
 		915591321D28BED800775AFC /* BaseSpinnerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9155912E1D28B23D00775AFC /* BaseSpinnerLayer.swift */; };
 		915591331D28BED800775AFC /* Style01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915591301D28B95200775AFC /* Style01.swift */; };
+		915591351D28E9D100775AFC /* Style02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915591341D28E9D100775AFC /* Style02.swift */; };
+		91E261881D28ECDD00E65CA1 /* Style02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915591341D28E9D100775AFC /* Style02.swift */; };
 		9296C7ABDE9E5894D47CD74E7F78F968 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A959968CF2B3D453620BE2B162D44A /* Match.swift */; };
 		92BC58B0158D9DFE7D59C341A85D4359 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D383B0CE560F2F5D2CD20B36CBFF3 /* Async.swift */; };
 		95F54B9537875729AE90B472EA5D39BF /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C692CD93C6F9DA7FD6F20E6D4DC288E /* Expectation.swift */; };
@@ -310,6 +312,7 @@
 		9082F45478C362610808EA87B8A66C41 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		9155912E1D28B23D00775AFC /* BaseSpinnerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSpinnerLayer.swift; sourceTree = "<group>"; };
 		915591301D28B95200775AFC /* Style01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style01.swift; sourceTree = "<group>"; };
+		915591341D28E9D100775AFC /* Style02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style02.swift; sourceTree = "<group>"; };
 		925A9C2F09DA0837CC59C273E94A3A1F /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Sources/Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
 		92C44A66F1CEA704C1EA8A9D71CA22DB /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -671,6 +674,7 @@
 			children = (
 				9155912E1D28B23D00775AFC /* BaseSpinnerLayer.swift */,
 				915591301D28B95200775AFC /* Style01.swift */,
+				915591341D28E9D100775AFC /* Style02.swift */,
 			);
 			name = SpinnerLayers;
 			sourceTree = "<group>";
@@ -1122,6 +1126,7 @@
 				9155912F1D28B23D00775AFC /* BaseSpinnerLayer.swift in Sources */,
 				497AA8816FC08215EF4C2431E1986992 /* FBSnapshotTestCase-dummy.m in Sources */,
 				6914EE43A9B8B8D30220B3B6B0D57523 /* FBSnapshotTestCase.m in Sources */,
+				915591351D28E9D100775AFC /* Style02.swift in Sources */,
 				6E4A16BF4D27C48BB1FE1E1CF5E8B90E /* FBSnapshotTestCasePlatform.m in Sources */,
 				F47158C234C50FFB069A1EF8AB26D9F1 /* FBSnapshotTestController.m in Sources */,
 				915591311D28B95200775AFC /* Style01.swift in Sources */,
@@ -1137,6 +1142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E261881D28ECDD00E65CA1 /* Style02.swift in Sources */,
 				915591321D28BED800775AFC /* BaseSpinnerLayer.swift in Sources */,
 				915591331D28BED800775AFC /* Style01.swift in Sources */,
 				D74C3E4B559E53902B93A9DC40F74A01 /* ZSpinner-dummy.m in Sources */,

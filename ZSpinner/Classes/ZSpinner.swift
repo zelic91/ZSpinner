@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class ZSpinner: UIView {
     
-    public enum SpinnerType : Int {
+    public enum SpinnerStyle : Int {
         case Style01 = 1
         case Style02 = 2
         case Style03 = 3
@@ -27,11 +27,11 @@ public class ZSpinner: UIView {
     }
     
     @IBInspectable
-    public var spinnerType: Int = 1 {
+    public var spinnerType: Int = 2 {
         didSet {
             self.spinnerLayer = getSpinnerLayer(self.spinnerType)
+            self.spinnerLayer?.contentsScale = UIScreen.mainScreen().scale
             setupLayer()
-            
         }
     }
     
@@ -39,10 +39,20 @@ public class ZSpinner: UIView {
     
     required override public init(frame: CGRect) {
         super.init(frame: frame)
+        setupNotification()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupNotification()
+    }
+    
+    func setupNotification() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ZSpinner.onGoingForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
+    }
+    
+    func onGoingForeground() {
+        animate()
     }
     
     public override func prepareForInterfaceBuilder() {
@@ -73,12 +83,22 @@ public class ZSpinner: UIView {
         guard let rawValue = raw else {
             return nil
         }
-        let value = SpinnerType.init(rawValue: rawValue)!
+        let value = SpinnerStyle.init(rawValue: rawValue)!
         switch value {
         case .Style01:
-            return Style01(radius: min(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds)) / 2, width: 3, color: UIColor.purpleColor().CGColor)
+            return Style01(radius: min(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds)) / 2, width: 3, color: UIColor.blackColor().CGColor)
         default:
-            return Style01(radius: min(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds)) / 2, width: 3, color: UIColor.purpleColor().CGColor)
+            return Style02(color: UIColor(red:0.95, green:0.77, blue:0.06, alpha:1.0).CGColor)
         }
     }
+//    
+//    public override func drawRect(rect: CGRect) {
+//        let context = UIGraphicsGetCurrentContext()
+//        CGContextSetStrokeColorWithColor(context, UIColor.grayColor().CGColor)
+//        CGContextSetLineWidth(context, 5)
+//        let center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
+//        let path: CGPath = UIBezierPath(arcCenter: center, radius: 20 - 3, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: true).CGPath
+//        CGContextAddPath(context, path)
+//        CGContextDrawPath(context, .Stroke)
+//    }
 }

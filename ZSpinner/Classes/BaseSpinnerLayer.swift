@@ -18,16 +18,19 @@ class BaseSpinnerLayer: CALayer {
     var width01: CGFloat  = 0
     var width02: CGFloat  = 0
     var width03: CGFloat  = 0
-    var color01: CGColor?
-    var color02: CGColor?
-    var color03: CGColor?
-    var color04: CGColor?
-    var color05: CGColor?
-    var color06: CGColor?
+    var color01: CGColor  = UIColor.blackColor().CGColor
+    var color02: CGColor  = UIColor.blackColor().CGColor
+    var color03: CGColor  = UIColor.blackColor().CGColor
+    var color04: CGColor  = UIColor.blackColor().CGColor
+    var color05: CGColor  = UIColor.blackColor().CGColor
+    var color06: CGColor  = UIColor.blackColor().CGColor
     
     // Internal
     var startAngle: CGFloat = 0
-    var endAngle: CGFloat   = 0
+    var endAngle: CGFloat   = 2 * CGFloat(M_PI)
+    var alpha01: CGFloat    = 1
+    var alpha02: CGFloat    = 1
+    var alpha03: CGFloat    = 1
     
     
     override init() {
@@ -57,8 +60,8 @@ class BaseSpinnerLayer: CALayer {
     init(speed01: CGFloat, speed02: CGFloat, speed03: CGFloat,
          radius01: CGFloat, radius02: CGFloat, radius03: CGFloat,
          width01: CGFloat, width02: CGFloat, width03: CGFloat,
-         color01: CGColor?, color02: CGColor?, color03: CGColor?,
-         color04: CGColor?, color05: CGColor?, color06: CGColor?) {
+         color01: CGColor, color02: CGColor, color03: CGColor,
+         color04: CGColor, color05: CGColor, color06: CGColor) {
         super.init()
         self.speed01  = speed01
         self.speed02  = speed02

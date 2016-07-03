@@ -10,7 +10,7 @@ import UIKit
 
 class Style01: BaseSpinnerLayer {
     
-    init(radius: CGFloat, width: CGFloat, color: CGColor?) {
+    init(radius: CGFloat, width: CGFloat, color: CGColor) {
         super.init()
         self.radius01 = radius
         self.width01  = width
@@ -29,8 +29,6 @@ class Style01: BaseSpinnerLayer {
         CGContextSetStrokeColorWithColor(ctx, color01)
         CGContextSetLineWidth(ctx, width01)
         CGContextSetLineCap(ctx, .Round)
-        CGContextSetShouldAntialias(ctx, true)
-        CGContextSetAllowsAntialiasing(ctx, true)
         let center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
         let path: CGPath = UIBezierPath(arcCenter: center, radius: radius01 - 3, startAngle: startAngle, endAngle: endAngle, clockwise: true).CGPath
         CGContextAddPath(ctx, path)
@@ -82,7 +80,6 @@ class Style01: BaseSpinnerLayer {
         let animGroup = CAAnimationGroup()
         animGroup.animations = [anim3, anim4, anim5, anim6]
         animGroup.duration = 1.5
-//        animGroup.autoreverses = true
         animGroup.repeatCount = Float(INT_MAX)
         
         return animGroup
