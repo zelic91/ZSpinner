@@ -1,0 +1,6 @@
+framework module ZSpinner {
+  umbrella header "ZSpinner-umbrella.h"
+
+  export *
+  module * { export * }
+}

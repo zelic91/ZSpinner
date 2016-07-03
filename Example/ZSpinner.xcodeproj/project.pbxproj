@@ -14,18 +14,34 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8B280DB98AE40F060624673C /* Pods_ZSpinner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679DF3520E0E90EF8C877B3D /* Pods_ZSpinner_Tests.framework */; };
+		9145E3771D27454300171DE9 /* ZSpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9145E3761D27454300171DE9 /* ZSpinner.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9145E3781D27454300171DE9 /* ZSpinner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9145E3761D27454300171DE9 /* ZSpinner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95CDC539BE65481DFBE7E7A9 /* Pods_ZSpinner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA845259B2F5127249EFFCD /* Pods_ZSpinner_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
+		91A884FE1D28125A00282402 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = ZSpinner;
+			remoteInfo = ZSpinner_Example;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9145E3791D27454300171DE9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9145E3781D27454300171DE9 /* ZSpinner.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2AA845259B2F5127249EFFCD /* Pods_ZSpinner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZSpinner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +61,7 @@
 		75FC143C39F4ED6345026121 /* Pods-ZSpinner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSpinner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSpinner_Example/Pods-ZSpinner_Example.release.xcconfig"; sourceTree = "<group>"; };
 		778B543619D65772420426B6 /* Pods-ZSpinner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSpinner_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSpinner_Tests/Pods-ZSpinner_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7CC769682C58F988847F9CCE /* Pods-ZSpinner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSpinner_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZSpinner_Tests/Pods-ZSpinner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9145E3761D27454300171DE9 /* ZSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ZSpinner.framework; path = "/Users/zelic/Library/Developer/Xcode/DerivedData/ZSpinner-hhnxfvibxfuwrwaxuoqpzqbkqngi/Build/Products/Debug-iphonesimulator/ZSpinner/ZSpinner.framework"; sourceTree = "<absolute>"; };
 		BBE555316F4C4033FBFF2B3F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CB45C48543160E382E7A94F5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95CDC539BE65481DFBE7E7A9 /* Pods_ZSpinner_Example.framework in Frameworks */,
+				9145E3771D27454300171DE9 /* ZSpinner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +160,7 @@
 		64168DE9B859E5E8055645FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9145E3761D27454300171DE9 /* ZSpinner.framework */,
 				2AA845259B2F5127249EFFCD /* Pods_ZSpinner_Example.framework */,
 				679DF3520E0E90EF8C877B3D /* Pods_ZSpinner_Tests.framework */,
 			);
@@ -172,6 +191,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				88F32EDF4F2B2F4BBF6026EF /* [CP] Embed Pods Frameworks */,
 				758AC703E548A6DE7EDEB1DE /* [CP] Copy Pods Resources */,
+				9145E3791D27454300171DE9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +216,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
+				91A884FF1D28125A00282402 /* PBXTargetDependency */,
 			);
 			name = ZSpinner_Tests;
 			productName = Tests;
@@ -218,7 +238,6 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -375,10 +394,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
+		91A884FF1D28125A00282402 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* ZSpinner_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+			targetProxy = 91A884FE1D28125A00282402 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -490,8 +509,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZSpinner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -503,7 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZSpinner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,6 +537,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",

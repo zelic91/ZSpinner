@@ -1,0 +1,22 @@
+{
+  "name": "ZSpinner",
+  "version": "0.1.0",
+  "summary": "An interesting activity indicator for iOS.",
+  "description": "Default UIActivityIndicator is boring. That's why ZSpinner comes to make the world a better place.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/ZSpinner",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Thuong Nguyen": "thuongnh.uit@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/zelic91/ZSpinner.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZSpinner/Classes/**/*"
+}
