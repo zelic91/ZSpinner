@@ -17,33 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaQ-J1-bHR" customClass="ZSpinner" customModule="ZSpinner">
-                                <rect key="frame" x="110" y="234" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="32F-t4-Ibf"/>
-                                    <constraint firstAttribute="width" constant="100" id="wsy-eN-bz5"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="spinnerType">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oay-5T-fbn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" id="Mlk-IY-zxn" customClass="SpinnerTableViewCell" customModule="ZSpinner_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mlk-IY-zxn" id="6m2-qB-xsB">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVk-Pp-XCl" customClass="ZSpinner" customModule="ZSpinner">
+                                                    <rect key="frame" x="115" y="5" width="90" height="90"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="pFG-K8-kLE"/>
+                                                        <constraint firstAttribute="height" constant="90" id="wuP-Ul-A4A"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gVk-Pp-XCl" firstAttribute="centerX" secondItem="6m2-qB-xsB" secondAttribute="centerX" id="Chg-pD-wAA"/>
+                                                <constraint firstItem="gVk-Pp-XCl" firstAttribute="centerY" secondItem="6m2-qB-xsB" secondAttribute="centerY" id="gvQ-Dv-dg9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="spinner" destination="gVk-Pp-XCl" id="JSp-rf-pJO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Lho-ZF-fD5"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="077-l4-7T5"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uaQ-J1-bHR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Gdf-Rr-dMP"/>
-                            <constraint firstItem="uaQ-J1-bHR" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Vp6-nb-w1h"/>
+                            <constraint firstItem="Oay-5T-fbn" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="A6G-dT-lC8"/>
+                            <constraint firstItem="Oay-5T-fbn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Afl-1G-2Tq"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Oay-5T-fbn" secondAttribute="bottom" id="Ezt-8e-NDt"/>
+                            <constraint firstAttribute="trailing" secondItem="Oay-5T-fbn" secondAttribute="trailing" id="OHw-ZS-5eW"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="spinner" destination="uaQ-J1-bHR" id="umS-dD-O0f"/>
+                        <outlet property="tableView" destination="Oay-5T-fbn" id="xOv-gf-VUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="258" y="290"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8B280DB98AE40F060624673C /* Pods_ZSpinner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679DF3520E0E90EF8C877B3D /* Pods_ZSpinner_Tests.framework */; };
+		91021C821D8D2A76009A7B46 /* SpinnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91021C811D8D2A76009A7B46 /* SpinnerTableViewCell.swift */; };
 		9145E3771D27454300171DE9 /* ZSpinner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9145E3761D27454300171DE9 /* ZSpinner.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9145E3781D27454300171DE9 /* ZSpinner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9145E3761D27454300171DE9 /* ZSpinner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95CDC539BE65481DFBE7E7A9 /* Pods_ZSpinner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA845259B2F5127249EFFCD /* Pods_ZSpinner_Example.framework */; };
@@ -61,6 +62,7 @@
 		75FC143C39F4ED6345026121 /* Pods-ZSpinner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSpinner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSpinner_Example/Pods-ZSpinner_Example.release.xcconfig"; sourceTree = "<group>"; };
 		778B543619D65772420426B6 /* Pods-ZSpinner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSpinner_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZSpinner_Tests/Pods-ZSpinner_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7CC769682C58F988847F9CCE /* Pods-ZSpinner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSpinner_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZSpinner_Tests/Pods-ZSpinner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		91021C811D8D2A76009A7B46 /* SpinnerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerTableViewCell.swift; sourceTree = "<group>"; };
 		9145E3761D27454300171DE9 /* ZSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ZSpinner.framework; path = "/Users/zelic/Library/Developer/Xcode/DerivedData/ZSpinner-hhnxfvibxfuwrwaxuoqpzqbkqngi/Build/Products/Debug-iphonesimulator/ZSpinner/ZSpinner.framework"; sourceTree = "<absolute>"; };
 		BBE555316F4C4033FBFF2B3F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CB45C48543160E382E7A94F5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				91021C811D8D2A76009A7B46 /* SpinnerTableViewCell.swift */,
 			);
 			name = "Example for ZSpinner";
 			path = ZSpinner;
@@ -380,6 +383,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				91021C821D8D2A76009A7B46 /* SpinnerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

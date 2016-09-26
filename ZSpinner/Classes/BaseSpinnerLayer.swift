@@ -26,12 +26,17 @@ class BaseSpinnerLayer: CALayer {
     var color06: CGColor  = UIColor.blackColor().CGColor
     
     // Internal
-    var startAngle: CGFloat = 0
-    var endAngle: CGFloat   = 2 * CGFloat(M_PI)
-    var alpha01: CGFloat    = 1
-    var alpha02: CGFloat    = 1
-    var alpha03: CGFloat    = 1
-    
+    var startAngle: CGFloat  = 0
+    var endAngle: CGFloat    = 2 * CGFloat(M_PI)
+    var alpha01: CGFloat     = 1
+    var alpha02: CGFloat     = 1
+    var alpha03: CGFloat     = 1
+    var position01: CGPoint  = CGPointZero
+    var position02: CGPoint  = CGPointZero
+    var position03: CGPoint  = CGPointZero
+    var position04: CGPoint  = CGPointZero
+    var position05: CGPoint  = CGPointZero
+    var position06: CGPoint  = CGPointZero
     
     override init() {
         super.init()
@@ -95,7 +100,9 @@ class BaseSpinnerLayer: CALayer {
     public override class func needsDisplayForKey(key: String) -> Bool {
         let keys = ["speed01", "speed02", "speed03", "radius01", "radius02", "radius03", "width01",
                     "width02", "width03", "color01", "color02", "color03", "color04", "color05",
-                    "color06", "startAngle", "endAngle"]
+                    "color06", "startAngle", "endAngle", "alpha01", "alpha02", "alpha03",
+                    "position01", "position02", "position03",
+                    "position04", "position05", "position06"]
         if keys.contains(key) {
             return true
         }

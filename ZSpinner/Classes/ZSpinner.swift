@@ -22,13 +22,13 @@ public class ZSpinner: UIView {
     
     public override var hidden: Bool {
         didSet {
-            
         }
     }
     
     @IBInspectable
-    public var spinnerType: Int = 2 {
+    public var spinnerType: Int = 1 {
         didSet {
+            print("Spinner type: ", spinnerType)
             self.spinnerLayer = getSpinnerLayer(self.spinnerType)
             self.spinnerLayer?.contentsScale = UIScreen.mainScreen().scale
             setupLayer()
@@ -83,22 +83,21 @@ public class ZSpinner: UIView {
         guard let rawValue = raw else {
             return nil
         }
+        let color: CGColor = UIColor(red:0.95, green:0.77, blue:0.06, alpha:1.0).CGColor
         let value = SpinnerStyle.init(rawValue: rawValue)!
         switch value {
         case .Style01:
-            return Style01(radius: min(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds)) / 2, width: 3, color: UIColor.blackColor().CGColor)
+            return Style01(radius: min(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds)) / 2, width: 3, color: color)
+        case .Style02:
+            return Style02(color: color)
+        case .Style03:
+            return Style03(color: color)
+        case .Style04:
+            return Style04(color: color)
+        case .Style05:
+            return Style05(color: color)
         default:
-            return Style02(color: UIColor(red:0.95, green:0.77, blue:0.06, alpha:1.0).CGColor)
+            return Style04(color: color)
         }
     }
-//    
-//    public override func drawRect(rect: CGRect) {
-//        let context = UIGraphicsGetCurrentContext()
-//        CGContextSetStrokeColorWithColor(context, UIColor.grayColor().CGColor)
-//        CGContextSetLineWidth(context, 5)
-//        let center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds))
-//        let path: CGPath = UIBezierPath(arcCenter: center, radius: 20 - 3, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: true).CGPath
-//        CGContextAddPath(context, path)
-//        CGContextDrawPath(context, .Stroke)
-//    }
 }
